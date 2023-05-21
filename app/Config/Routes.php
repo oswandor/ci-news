@@ -29,7 +29,17 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/' , 'LoginController::index'); 
+$routes->post('/login' , 'LoginController::login'); 
+
+//$routes->get('/', 'UsersController::index');
+$routes->get('roles', 'UsersController::index'); // Listar roles
+$routes->get('roles/new', 'UsersController::new'); // Formulario de creación de rol
+$routes->post('roles/create', 'UsersController::create'); // Procesar creación de rol
+$routes->get('roles/edit/(:num)', 'UsersController::edit/$1'); // Formulario de edición de rol
+$routes->post('roles/update/(:num)', 'UsersController::update/$1'); // Procesar actualización de rol
+$routes->get('roles/delete/(:num)', 'UsersController::delete/$1'); // Eliminar rol
+
 
 /*
  * --------------------------------------------------------------------

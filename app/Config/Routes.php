@@ -41,6 +41,22 @@ $routes->post('roles/update/(:num)', 'UsersController::update/$1'); // Procesar 
 $routes->get('roles/delete/(:num)', 'UsersController::delete/$1'); // Eliminar rol
 
 
+
+//$routes->get('/', 'UsersController::index');
+$routes->get('student', 'EstudiateController::index'); // Listar roles
+$routes->get('student/new', 'EstudiateController::new'); // Formulario de creación de rol
+$routes->post('student/create', 'EstudiateController::create'); // Procesar creación de rol
+$routes->get('student/edit/(:num)', 'EstudiateController::edit/$1'); // Formulario de edición de rol
+$routes->post('student/update/(:num)', 'EstudiateController::update/$1'); // Procesar actualización de rol
+$routes->get('student/delete/(:num)', 'EstudiateController::delete/$1'); // Eliminar rol
+
+
+
+
+
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

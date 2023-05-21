@@ -23,10 +23,25 @@
    top: 150px;
 
 }
+
+
+form  .sizeform{
+position: relative;
+width: 100px;
+height: 100px;
+background-color: blue;
+} 
+
+</style>
+
+
     </style>
 </head>
 
 <body>
+
+
+
 
 
 <nav class="navbar navbar-dark bg-dark">
@@ -45,49 +60,22 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Users</a>
+
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/student">Estudiantes</a>
+          
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Button Editar y Eliminar</th>
-    </tr>
-  </thead>
-  <tbody>
+  
 
+<?= $this->renderSection('content') ?>
 
-  <?php  foreach ($roles as $rol): ?>
-    <tr>
-    
-    <th scope="row"><?php echo $rol['id_rol']; ?></th>
-            <td><?php echo $rol['nombre_rol']; ?></td>
-
-    <td>
-                    <!-- Agrega enlaces para editar y eliminar -->
-                    <a   type="button" class="btn btn-outline-success" href="<?php echo base_url('roles/edit/' . $rol['id_rol']); ?>">Editar</a>
-                    <a type="button" class="btn btn-outline-danger" href="<?php echo base_url('roles/delete/' . $rol['id_rol']); ?>">Eliminar</a>
-                </td>
-    <?php endforeach; ?>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-<a  type="button" class="btn btn-primary btn-lg bnt-lef" href="<?php echo base_url('roles/new'); ?>" >crear</a>
-
-
+</html> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</html>
